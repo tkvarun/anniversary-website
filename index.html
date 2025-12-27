@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 3rd Anniversary ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      max-width: 400px;
+    }
+    h1 { font-size: 2.2em; }
+    p { font-size: 1.1em; line-height: 1.6; }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: #ff4d6d;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .hidden { display: none; }
+    .heart { font-size: 2.5em; animation: pulse 1.2s infinite; }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    /* Slideshow with captions */
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      margin-top: 20px;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      animation: slide 12s infinite;
+    }
+    .slide:nth-child(1) { animation-delay: 0s; }
+    .slide:nth-child(2) { animation-delay: 4s; }
+    .slide:nth-child(3) { animation-delay: 8s; }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .caption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.45);
+      padding: 8px;
+      font-size: 0.95em;
+    }
+    @keyframes slide {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      30% { opacity: 1; }
+      40% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Happy 3rd Anniversary 💕</h1>
+    <p>Three years ago, my life changed forever 💫<br>
+    Every smile of yours makes my world brighter.</p>
+
+    <button onclick="showMessage()">Click for a Surprise 🎁</button>
+
+    <div id="surprise" class="hidden">
+      <p>
+        To my love ❤️<br><br>
+        Thank you for being my happiness, my strength,
+        and my forever. I promise to love you more with every year.
+      </p>
+
+      <!-- Photo Slideshow -->
+      <div class="slideshow">
+        <div class="slide">
+          <img src="C:\Users\91832\Desktop\Anniversary Project\images\photos1" alt="Our first memory">
+          <div class="caption">Our first beautiful memory ❤️</div>
+        </div>
+        <div class="slide">
+          <img src="C:\Users\91832\Desktop\Anniversary Project\images\photos2" alt="Best moments together">
+          <div class="caption">Every moment with you is special 💕</div>
+        </div>
+        <div class="slide">
+          <img src="C:\Users\91832\Desktop\Anniversary Project\images\photos3" alt="Forever together">
+          <div class="caption">Forever starts with you 💍</div>
+        </div>
+      </div>
+
+      <div class="heart">❤️</div>
+      <p>Yours always,<br><b>Varun</b></p>
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('surprise').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
